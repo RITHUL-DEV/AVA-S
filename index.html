@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AVAS Pet Center — adopt loving pets, book grooming and shop pet essentials.">
+  <title>AVAS Pet Center | Adopt. Care. Love.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">🐾 AVAS<span> Pet Center</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#adoption">Adopt a Pet</a>
+    <a href="#grooming">Grooming</a>
+    <a href="#shop">Pet Shop</a>
+    <a href="#contact">Contact</a>
+    <button class="cart-button" id="openCart">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="eyebrow"></span>
+    <h1>Find your best friend.<br><span>Give them a home.</span></h1>
+    <p>Meet your new companion, pamper your furry family, and find everything your pets need — all in one happy place.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#adoption">Meet Our Pets →</a>
+      <a class="btn secondary" href="#shop">Explore Pet Shop</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>100%</strong><small>Pet-first care</small></div>
+      <div><strong>All-in-one</strong><small>Pet services</small></div>
+      <div><strong>Lots of love</strong><small>Every single day</small></div>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=85" alt="Happy golden retriever">
+    <div class="photo-note">💚 Your new best friend is waiting!</div>
+    <span class="paw-decoration">🐾</span>
+  </div>
+</section>
+
+<section class="section adoption-section" id="adoption">
+  <div class="section-heading">
+    <span class="eyebrow">A forever home starts here</span>
+    <h2>Meet your new <span>best friend</span> 🐶</h2>
+    <p>Every pet deserves love, care, and a family. Maybe that family is yours.</p>
+  </div>
+  <div class="filters" id="petFilters">
+    <button class="filter-btn active" data-pet-filter="All">All Pets</button>
+    <button class="filter-btn" data-pet-filter="Dogs">Dogs</button>
+    <button class="filter-btn" data-pet-filter="Cats">Cats</button>
+    <button class="filter-btn" data-pet-filter="Puppies">Puppies</button>
+    <button class="filter-btn" data-pet-filter="Kittens">Kittens</button>
+  </div>
+  <div class="pet-grid" id="petGrid"></div>
+  <p class="section-note">🐾 Adoption applications are reviewed by our team. Pet availability may change.</p>
+</section>
+
+<section class="care-banner">
+  <div>
+    <span class="eyebrow">More than a pet shop</span>
+    <h2>Every tail deserves<br>a little extra care.</h2>
+    <p>From nutritious meals to playful toys and relaxing grooming, we've got your pet covered.</p>
+    <a class="btn primary" href="#grooming">Discover Our Services →</a>
+  </div>
+  <div class="care-emoji">🐕 🐈 🦴</div>
+</section>
+
+<section class="section" id="grooming">
+  <div class="section-heading">
+    <span class="eyebrow">Fresh, fluffy & fabulous</span>
+    <h2>Pet grooming <span>& spa</span> ✂️</h2>
+    <p>Gentle care and a little pampering for your furry family.</p>
+  </div>
+  <div class="service-grid">
+    <article class="service-card">
+      <div class="service-icon">🛁</div><h3>Bath & Blow Dry</h3>
+      <p>A refreshing bath, gentle shampoo, and a fluffy finish.</p>
+      <strong>From ₹399</strong>
+      <button class="btn primary book-service" data-service="Bath & Blow Dry">Book Service</button>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">✂️</div><h3>Haircut & Styling</h3>
+      <p>A tidy, comfortable style suited to your pet's coat.</p>
+      <strong>From ₹599</strong>
+      <button class="btn primary book-service" data-service="Haircut & Styling">Book Service</button>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">🐾</div><h3>Nail & Paw Care</h3>
+      <p>Careful nail trimming and paw cleaning.</p>
+      <strong>From ₹199</strong>
+      <button class="btn primary book-service" data-service="Nail & Paw Care">Book Service</button>
+    </article>
+    <article class="service-card">
+      <div class="service-icon">✨</div><h3>Full Pet Spa</h3>
+      <p>A pampering package with brushing, bathing, and coat care.</p>
+      <strong>From ₹799</strong>
+      <button class="btn primary book-service" data-service="Full Pet Spa">Book Service</button>
+    </article>
+  </div>
+</section>
+
+<section class="section shop-section" id="shop">
+  <div class="section-heading">
+    <span class="eyebrow">Little treats, big happiness</span>
+    <h2>Shop pet <span>essentials</span> 🦴</h2>
+    <p>Everyday essentials and fun finds for your favorite companions.</p>
+  </div>
+  <div class="filters" id="productFilters">
+    <button class="filter-btn active" data-product-filter="All">All Products</button>
+    <button class="filter-btn" data-product-filter="Food">Food</button>
+    <button class="filter-btn" data-product-filter="Toys">Toys</button>
+    <button class="filter-btn" data-product-filter="Accessories">Accessories</button>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="section why-section">
+  <div class="section-heading">
+    <span class="eyebrow">Why families choose us</span>
+    <h2>Made with <span>love</span> 🧡</h2>
+  </div>
+  <div class="benefit-grid">
+    <article><span>🏡</span><h3>Adoption Support</h3><p>Guidance to help pets and families find the right match.</p></article>
+    <article><span>🧼</span><h3>Gentle Grooming</h3><p>Comfort-focused grooming with your pet's needs in mind.</p></article>
+    <article><span>🦴</span><h3>Pet Essentials</h3><p>Food, toys, and accessories for everyday pet care.</p></article>
+    <article><span>💚</span><h3>Care That Matters</h3><p>A friendly team that puts animal wellbeing first.</p></article>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="section-heading">
+    <span class="eyebrow">Happy pets, happy humans</span>
+    <h2>Love from our <span>community</span></h2>
+  </div>
+  <div class="testimonial-grid">
+    <article><div class="stars">★★★★★</div><p>"The team made the adoption process easy to understand. We love our new family member!"</p><strong>— A happy pet parent</strong></article>
+    <article><div class="stars">★★★★★</div><p>"Friendly service and a lovely selection of essentials for my dog."</p><strong>— A local customer</strong></article>
+    <article><div class="stars">★★★★★</div><p>"The grooming booking was simple, and my pup came home looking adorable."</p><strong>— A proud dog parent</strong></article>
+  </div>
+  <p class="section-note">Sample testimonials for the demo website.</p>
+</section>
+
+<section class="newsletter section">
+  <div><span class="eyebrow">Join the AVAS family</span><h2>Good news for <span>pet lovers</span> 🐾</h2><p>Get pet-care tips and shop updates in your inbox.</p></div>
+  <form id="newsletterForm" class="newsletter-form">
+    <label class="sr-only" for="newsletterEmail">Email address</label>
+    <input id="newsletterEmail" type="email" placeholder="Enter your email address" required>
+    <button class="btn primary" type="submit">Join Us</button>
+  </form>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-glow"></div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo footer-logo" href="#home">🐾 AVAS<span> Pet Center</span></a>
+      <p>A happy place for adoption, grooming, and all the little things that make pets feel loved.</p>
+      <p class="footer-love">Made with 🧡 for every paw and tail.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div><h3>Explore</h3><a href="#home">Home</a><a href="#adoption">Adopt a Pet</a><a href="#grooming">Grooming & Spa</a><a href="#shop">Pet Shop</a></div>
+    <div><h3>Pet Shop</h3><a href="#shop">Food & Treats</a><a href="#shop">Toys</a><a href="#shop">Accessories</a><a href="#grooming">Book Grooming</a></div>
+    <div><h3>Visit AVAS</h3><p>📍 Kerala, India</p><p>🕒 Mon–Sat: 9 AM–7 PM</p><p>📧 hello@avaspets.example</p><p>☎️ Add your business phone</p><p class="footer-small">Replace demo contact details before publishing.</p></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> AVAS Pet Center. All rights reserved.</span><a href="#home">Back to top ↑</a></div>
+</footer>
+
+<dialog id="cartDialog" class="modal">
+  <div class="modal-heading"><h2>🛒 Your Cart</h2><button class="close-modal" data-close="cartDialog" aria-label="Close cart">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="cart-total">Total: <strong id="cartTotal">₹0</strong></div>
+  <button class="btn primary full-width" id="checkoutBtn">Continue to Checkout</button>
+  <p class="section-note">Demo cart only. No real payment is processed.</p>
+</dialog>
+
+<dialog id="groomingDialog" class="modal">
+  <div class="modal-heading"><h2>✂️ Book Grooming</h2><button class="close-modal" data-close="groomingDialog" aria-label="Close booking form">✕</button></div>
+  <form id="groomingForm" class="form-stack">
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Phone number<input name="phone" type="tel" required pattern="[0-9+() -]{7,20}"></label>
+    <label>Pet name<input name="petName" required></label>
+    <label>Choose service<select id="groomingService" name="service" required><option value="">Select a service</option><option>Bath & Blow Dry</option><option>Haircut & Styling</option><option>Nail & Paw Care</option><option>Full Pet Spa</option></select></label>
+    <label>Preferred date<input name="date" type="date" id="groomingDate" required></label>
+    <button class="btn primary full-width" type="submit">Request Appointment</button>
+    <p class="form-message" aria-live="polite"></p>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

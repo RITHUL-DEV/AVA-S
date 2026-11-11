@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet an adoptable pet at AVAS Pet Center and express your adoption interest.">
+  <title>Meet Your Pet | AVAS Pet Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">🐾 AVAS<span> Pet Center</span></a>
+  <a class="btn secondary" href="index.html#adoption">← All Pets</a>
+</header>
+
+<main class="details-main">
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#adoption">Adopt a Pet</a> / <span id="breadcrumbPet">Meet Your Pet</span></div>
+
+  <section id="petDetailContent">
+    <div class="loading-card">Finding your new best friend… 🐾</div>
+  </section>
+
+  <section class="section adoption-form-section" id="interest">
+    <div class="section-heading">
+      <span class="eyebrow">Your journey starts here</span>
+      <h2>Interested in <span id="formPetName">adoption</span>?</h2>
+      <p>Tell us a little about yourself so our team can follow up with you.</p>
+    </div>
+    <form id="adoptionForm" class="adoption-form">
+      <input type="hidden" name="petId" id="formPetId">
+      <div class="form-grid">
+        <label>Full name *<input name="name" autocomplete="name" required></label>
+        <label>Email address *<input name="email" type="email" autocomplete="email" required></label>
+        <label>Phone number *<input name="phone" type="tel" pattern="[0-9+() -]{7,20}" autocomplete="tel" required></label>
+        <label>City / Location *<input name="city" autocomplete="address-level2" required></label>
+        <label>Home type *
+          <select name="homeType" required><option value="">Choose one</option><option>Apartment</option><option>House</option><option>Other</option></select>
+        </label>
+        <label>Have you owned a pet before? *
+          <select name="previousPet" required><option value="">Choose one</option><option>Yes</option><option>No</option></select>
+        </label>
+        <label class="full-field">Why would you like to adopt this pet? *
+          <textarea name="reason" rows="4" required minlength="10" placeholder="Tell us about the home and care you can provide…"></textarea>
+        </label>
+        <label class="full-field">Anything else we should know?
+          <textarea name="message" rows="3" placeholder="Optional message"></textarea>
+        </label>
+      </div>
+      <label class="consent"><input type="checkbox" name="consent" required> I understand this is an expression of interest, and adoption depends on a suitability review and pet availability.</label>
+      <button class="btn primary full-width" type="submit">Submit Adoption Interest 🐾</button>
+      <p id="adoptionMessage" class="form-message" role="status" aria-live="polite"></p>
+      <p class="section-note">Demo form: your details are not sent or stored. Connect a secure backend to receive real applications.</p>
+    </form>
+  </section>
+
+  <section class="section related-section">
+    <div class="section-heading"><span class="eyebrow">More furry friends</span><h2>Meet more <span>companions</span></h2></div>
+    <div class="pet-grid" id="relatedPets"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><a class="logo footer-logo" href="index.html">🐾 AVAS<span> Pet Center</span></a><p>Every paw deserves a loving home.</p><p class="footer-love">Made with 🧡 for every paw and tail.</p></div>
+    <div><h3>Explore</h3><a href="index.html">Home</a><a href="index.html#adoption">Adopt a Pet</a><a href="index.html#grooming">Grooming</a></div>
+    <div><h3>Need Help?</h3><a href="index.html#contact">Contact AVAS</a><a href="index.html#shop">Pet Shop</a></div>
+    <div><h3>Our Promise</h3><p>Pet-first care</p><p>Responsible adoption</p><p>Lots of love 🐾</p></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> AVAS Pet Center</span><a href="#">Back to top ↑</a></div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
